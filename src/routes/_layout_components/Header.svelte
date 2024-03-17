@@ -10,15 +10,20 @@
 
 <script lang="ts">
   import Highlight, {
-    highlight_sections, type HighlightSectionInterface,
-    setActiveLink, setActiveLinkIndex, getActiveLinkIndex, enterHover, exitHover
+    setActiveLink, 
+    setActiveLinkIndex, 
+    getActiveLinkIndex, 
+    enterHover, 
+    exitHover
   } from "./Highlight.svelte";
   import MenuButton from "./MenuButton.svelte";
 
   import { onMount } from "svelte";
 
-  import kodama_kai_logo_small from "$lib/res/icons/svg/kodama-kai_logo-small.svg";
+  import { highlight_sections, type HighlightSectionInterface } from "$lib";
+
   import "$lib/res/font/clash-display/clash-display.css";
+  import kodama_kai_logo_small from "$lib/res/icons/svg/kodama-kai_logo-small.svg";
 
   let height : number;
   let links_container : Element;

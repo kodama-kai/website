@@ -9,34 +9,7 @@
 -->
 
 <script context="module" lang="ts">
-  import { writable } from "svelte/store";
-
   import { gsap, Power3 } from "gsap";
-
-  interface HighlightSectionInterface {
-    section_element : HTMLElement,
-    show_name : string
-  }
-
-  const createHighlightSections = () => {
-    const { subscribe, set, update } = writable<HighlightSectionInterface[]>([]);
-
-    return {
-      subscribe,
-      push : (highlight_section : HighlightSectionInterface) => update((value) => {
-        value.push(highlight_section);
-        return value;
-      }),
-      reset : () => set([])
-    };
-  }
-
-  const highlight_sections = createHighlightSections();
-
-  export {
-    highlight_sections,
-    type HighlightSectionInterface
-  }
 
   let highlight : Element;
   
