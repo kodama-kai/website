@@ -6,7 +6,12 @@
 // --------------------------------------------- 
 // --------------------------------------------- 
 
-import { writable } from "svelte/store";
+import EntryPoint from "./EntryPoint.svelte";
+import DesktopLayout from "./DesktopLayout.svelte";
+import MobileLayout from "./mobile/MobileLayout.svelte";
 
-export const is_big_screen = writable(true); // Check screen size (see "src/routes/layout.svelte") 
-export const is_menu_open = writable(false); // Check menu open (see "lib/components/layout/header.svelte")
+export { 
+  EntryPoint,
+  DesktopLayout,
+  MobileLayout
+ }
